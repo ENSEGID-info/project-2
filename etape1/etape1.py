@@ -1,5 +1,6 @@
 import shapely
 import fiona
+import geopandas
 
 
 def etape1_main():
