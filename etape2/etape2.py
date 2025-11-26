@@ -1,11 +1,5 @@
 import pandas as pd
 
-
-#J'écris n'imp.
-def youpi4(n):
-    return '4+n'
-
-
 # Charger les points de mesure
 data = pd.read_csv("epaisseur_glace.csv")
 
@@ -34,4 +28,3 @@ plt.xlabel("Longitude")
 plt.ylabel("Latitude")
 plt.title("Interpolation spatiale de l'épaisseur de la glace (cubic)")
 plt.show()
-
