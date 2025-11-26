@@ -4,3 +4,7 @@ def etape2_main(data):
     result = max(data)
     return result
 
+#J'écris n'imp.
+def youpi4(n):
+    return '4+n'
+
