@@ -1,4 +1,9 @@
-#The ice thickness calculated in step (4) is used as input for a spatial interpolation. The glacier outline is used as a boundary condition with zero ice thickness. The inter- polation routine uses an inverse distance averaging tech- nique, weighting the individual interpolation nodes with the inverse of the squared distance from the considered point
+#The ice thickness calculated in step (4) is used as input for 
+#a spatial interpolation. The glacier outline is used as a boundary 
+#condition with zero ice thickness. The inter- polation routine uses 
+#an inverse distance averaging tech- nique, weighting the individual
+# interpolation nodes with the inverse of the squared distance from
+# the considered point
 # ============================================
 # Interpolation IDW (1/d^2) de l'épaisseur de glace
 # avec frontière forcée à 0 m
