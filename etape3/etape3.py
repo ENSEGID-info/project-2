@@ -17,7 +17,13 @@ def etape3_main(n):
 
     return r
 
-
+def etape3(e):
+    ef=[]
+    l=etape3_main(3,e)
+    for k in range(len(e)):
+        i=e[k]-l[k]
+        ef.append(i)
+    return ef
 
 
 
