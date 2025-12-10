@@ -27,7 +27,40 @@ def prise_en_compte_de_la_pente(e,a):                                      # e e
         ef.append(i)
     return ef
 
-
+def interpolerA(e,a):
+    le=len(e)
+    la=len(a)
+    l=[]
+    if la<=le:
+        d=le//la
+        for k in a:
+            for i in range(d):
+                l.append(k)
+        while len(l)<len(e):
+            l.append(e[-1])
+    return l
 
 def etape3_main(e,a):
     prise_en_compte_de_la_pente(e,a)
+
+import matplotlib.pyplot as plt
+
+def graph(e,a):
+    epaisseur_corr = etape3_main(e,a)
+    effet_pente = [e[i] - epaisseur_corr[i] for i in range(len(e))]
+
+    x = range(len(e))
+
+    plt.figure(figsize=(len(e), 6))
+
+    plt.plot(x, e, label="Épaisseur initiale extrapolée", marker="o")
+    plt.plot(x, epaisseur_corr, label="Épaisseur corrigée (pente)", marker="o")
+    plt.plot(x, effet_pente, label="Effet de la pente", linestyle="--")
+
+    plt.xlabel("Point n°")
+    plt.ylabel("Épaisseur")
+    plt.title("Effet de la pente sur l'épaisseur de glace")
+    plt.legend()
+    plt.grid(True)
+
+    plt.show()
