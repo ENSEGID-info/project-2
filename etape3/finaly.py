@@ -154,14 +154,14 @@ a=interpolerA(e,gdf['slope_deg'].astype(float))
 
 a_connus = gdf['slope_deg'].astype(float)
 
-def interpolationA2(P=50, puissance=2):
+def interpolationA2(P=10000, puissance=2):
     """
     
 
     Parameters
     ----------
     P : même chose que étape 2
-        DESCRIPTION. The default is 50.
+        DESCRIPTION. The default is 10000.
     puissance : TYPE, optional
         DESCRIPTION. The default is 2.
 
@@ -189,7 +189,7 @@ def interpolationA2(P=50, puissance=2):
    
     return list(a_interp)  # ← retourne la liste des épaisseurs
 
-a2=interpolationA2(P=50, puissance=2)
+a2=interpolationA2(P=10000, puissance=2)
 # =============================================================================
 # étape 3
 # =============================================================================
