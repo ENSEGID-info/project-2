@@ -2,7 +2,7 @@
 """
 Spyder Editor
 
-This is a temporary script file.
+Le code terminé
 """
 
 # =============================================================================
@@ -65,21 +65,20 @@ x_connus = gdf['distance_m'].astype(float)
 e_connus = etape1_main ()
 
 # --- Fonction IDW 1D ---
-def interpolation_spatiale_1d(P=50, puissance=2):
+def interpolation_spatiale_1d(P=10000, puissance=2):
     """
     
 
     Parameters
     ----------
-    P : nombre de valeur dans l'interpolation',
-        DESCRIPTION. The default is 50.
+    P : nombre de valeurs dans l'interpolation',
+        DESCRIPTION. The default is 10000.
     puissance : puissance de l'inverse',
         DESCRIPTION. The default is 2.
 
     Returns
     -------
-    liste
-        epaisseur interpolé.
+    épaisseur interpolée sous forme de liste
 
     """
     x_arr = np.asarray(x_connus, dtype=float)
@@ -102,7 +101,7 @@ def interpolation_spatiale_1d(P=50, puissance=2):
     return list(e_interp)  # ← retourne la liste des épaisseurs
 
 # --- Exécution ---
-epaisseurs_interpolees = interpolation_spatiale_1d(P=50, puissance=2)
+epaisseurs_interpolees = interpolation_spatiale_1d(P=10000, puissance=2)
 
 # --- Affichage (optionnel) ---
 #print(epaisseurs_interpolees)
